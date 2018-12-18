@@ -6,7 +6,7 @@ bool arePermutations(string a,string b){
     freq[a[i]-'a']++; // 65 is ASCII value of 'a'
   }
   for(int i=0;i<b.length();i++){
-    freq[a[i]-'a']--;
+    freq[b[i]-'a']--;
   }
   // If they are permutations then freq array will only have zeroes
   for(int i=0;i<26;i++){
