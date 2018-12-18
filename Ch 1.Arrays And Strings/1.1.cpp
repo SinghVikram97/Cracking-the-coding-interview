@@ -1,3 +1,5 @@
+https://leetcode.com/problems/contains-duplicate/
+
 #include<bits/stdc++.h>
 using namespace std;
 // O(n^2) time O(1) space
