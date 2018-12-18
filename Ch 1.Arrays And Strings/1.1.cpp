@@ -1,5 +1,7 @@
 https://leetcode.com/problems/contains-duplicate/
 
+// Check if string contains unique characters
+
 #include<bits/stdc++.h>
 using namespace std;
 // O(n^2) time O(1) space

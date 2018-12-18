@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/valid-anagram/submissions/
+
+// Check if 2 strings permutationor anagrams of each other
 #include<bits/stdc++.h>
 using namespace std;
 bool arePermutations(string a,string b){
