@@ -46,6 +46,9 @@ bool isUnique3(string &s,int length){
 // However, a limitation of bitset is, N must be known at compile time, i.e., a constant
 // (this limitation is not there with vector and dynamic array)
 
+
+//Reduce space usage by a factor of 8 using bitvector. 
+//Each boolean otherwise occupies a size of 8 bits.
 bool isUnique4(string &s,int length){
 
   // Intialize all bits with 0
