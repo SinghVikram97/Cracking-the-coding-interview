@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// https://leetcode.com/problems/string-compression/
 // O(N) space and time
 string compress1(string &s){
   string result;
