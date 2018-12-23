@@ -1,3 +1,4 @@
+// If you want to delete anything just keep track of prev pointer
 Node *removeDuplicates(Node *head)
 {
   unordered_set<int> mySet;
