@@ -18,3 +18,35 @@ void levelOrder(Node* head)
       }
   }
 }
+// https://practice.geeksforgeeks.org/problems/level-order-traversal-line-by-line/1
+void levelOrderLineByLine(Node* head)
+{
+  if(head==NULL){
+    return;
+  }
+  
+  queue<Node *> myQueue;
+  myQueue.push(head);
+  myQueue.push(NULL);
+
+  while(!myQueue.empty()){
+    Node *frontElement=myQueue.front();
+    myQueue.pop();
+    if(frontElement!=NULL){
+      cout<<frontElement->data<<" ";
+      if(frontElement->left!=NULL){
+        myQueue.push(frontElement->left);
+      }
+      if(frontElement->right!=NULL){
+        myQueue.push(frontElement->right);
+      }
+    }
+    else{
+      cout<<"$"<<" ";
+      if(!myQueue.empty()){
+        myQueue.push(NULL);
+      }
+    }
+    
+  }
+}
