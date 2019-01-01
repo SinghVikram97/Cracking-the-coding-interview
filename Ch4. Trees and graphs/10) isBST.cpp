@@ -1,3 +1,4 @@
+// 1st Method
 // p.first is whether subtree rooted at curNode is BST or not
 // p.second.first is maximum value in tree rooted at left subtree (if root>max then automatically greater than all in left subtree)
 // p.second.second is minimum value in tree rooted at right subtree (if root<min then automatically less than all in right subtree)
@@ -30,4 +31,30 @@ pair<bool,pair<ll,ll> > isBSTHelper(Node *root){
 bool isBST(Node *root){
   pair<bool,pair<int,int> > p=isBSTHelper(root);
   return p.first;
+}
+
+// 2nd Method by MinMax Method
+bool isBSTHelper(Node *root,int lowerBound,int upperBound){
+  if(root==NULL){
+    return true;
+  }
+  if(root->data>=lowerBound && root->data<upperBound){
+    if(isBSTHelper(root->left,lowerBound,root->data) && isBSTHelper(root->right,root->data,upperBound)){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  else{
+    return false;
+  }
+}
+bool isBST(Node *root){
+  if(isBSTHelper(root,INT_MIN,INT_MAX)){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
