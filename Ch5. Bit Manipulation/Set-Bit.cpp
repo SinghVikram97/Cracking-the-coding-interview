@@ -2,11 +2,11 @@
 using namespace std;
 #define ll long long int
 // Set kth bit
-int setBit(ll n, ll k)
+int clearKthBit(ll n, ll k)
 {
-  ll mask = (1 << k);
-  ll result = (n | mask);
-  return result
+  ll mask = ~(1 << k); // all 1 except a 0 at kth position
+  ll result = (n & mask);
+  return result;
 }
 int main()
 {
@@ -16,6 +16,6 @@ int main()
   {
     ll n, k;
     cin >> n >> k;
-    cout << setBit(n, k) << endl;
+    cout << clearKthBit(n, k) << endl;
   }
 }
