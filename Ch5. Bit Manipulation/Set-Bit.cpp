@@ -1,21 +1,16 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long int
-// Set kth bit
-int clearKthBit(ll n, ll k)
-{
-  ll mask = ~(1 << k); // all 1 except a 0 at kth position
-  ll result = (n & mask);
-  return result;
+void setBit(int &n,int &k){
+  int mask=(1<<k); /// All zero except 1 at kth position
+  int result=(n|mask);
+  n=result;
 }
-int main()
-{
-  int t;
-  cin >> t;
-  while (t--)
-  {
-    ll n, k;
-    cin >> n >> k;
-    cout << clearKthBit(n, k) << endl;
-  }
+int main(){
+  int n,k;
+  cout<<"Enter the number"<<endl;
+  cin>>n;
+  cout<<"Enter position of bit to set"<<endl;
+  cin>>k;
+  setBit(n,k);
+  cout<<"New Number is "<<n<<endl;
 }
